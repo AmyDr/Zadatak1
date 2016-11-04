@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace Project.Code
+//static class Operations which holds operation names 
+//const - nepromjenjive
 {
     public static class Operations
         {

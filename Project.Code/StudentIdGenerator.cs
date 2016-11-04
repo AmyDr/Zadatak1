@@ -4,23 +4,24 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace Project.Code
+// StudentIdGenerator class which will provide unique id-s, you may use Singleton pattern 
 {
     public class StudentIdGenerator
     {
-            private static StudentIdGenerator instance;
-            private int nextID;
-            private StudentIdGenerator() { nextID = 1; }
+            private static StudentIdGenerator instance; //singleton pattern
+            private int nextId;
+            public StudentIdGenerator() {nextId = 1;}
             public static StudentIdGenerator getGenerator()
             {
-                if (instance == null)
+                if (instance == null)//provjera postoji li instanca generatora
                 {
-                    instance = new StudentIdGenerator();
+                    instance = new StudentIdGenerator(); //ako nema, kreira ju
                 }
                 return instance;
             }
-            public int nextId()
+            public int NextId()
             {
-                return nextID++;
+                return nextId++;
             }
     }
 }
