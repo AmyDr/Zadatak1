@@ -9,7 +9,7 @@ namespace Project.Code
     public class StudentIdGenerator
     {
             private static StudentIdGenerator instance; //singleton pattern
-            private int nextId;
+            public int nextId;
             public StudentIdGenerator() {nextId = 1;}
             public static StudentIdGenerator getGenerator()
             {

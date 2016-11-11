@@ -10,11 +10,11 @@ namespace Project.Code
     {
         private List<Student> studentList = new List<Student>(); //kreiranje liste klase student
         private StudentIdGenerator studentIdGenerator; //definiranje generatora
+        private static StudentContainer instance;
         public StudentContainer() {
             studentIdGenerator = StudentIdGenerator.getGenerator(); //instanciranje generatora
         }
         //singleton pattern za listu
-        private static StudentContainer instance;
         public static StudentContainer Instance()
         {
             if (instance == null)
@@ -30,6 +30,7 @@ namespace Project.Code
             studentList.Add(new Student()
             { FirstName = name, LastName = lastName, Gpa = gpa, Id = StudentIdGenerator.NextId() });
         }
+        
         public List<Student> GetStudents()
         {
             studentList = studentList.OrderBy(x => x.LastName).ToList();  //sort by last name - ascending

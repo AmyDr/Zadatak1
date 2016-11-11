@@ -15,7 +15,6 @@ namespace Project.Code
             else
                 return false;
         }
-
         public static bool ValidateGpa(string gpa)
         {
             bool result;
@@ -23,7 +22,6 @@ namespace Project.Code
             result = double.TryParse(gpa, out number);
             return result;
         }
-
         public static bool ValidateOperation(string operation)
         {
             if (operation != Operations.Enlist && operation != Operations.Display)
