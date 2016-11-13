@@ -11,6 +11,7 @@ namespace Project.App
     {
         public void Main(string[] args)
         {
+
             string firstName;
             string lastName;
             string gpa;
@@ -18,8 +19,6 @@ namespace Project.App
             bool validateOperation;
             bool validateString;
             bool result;
-            int nextId;
-
             StudentContainer student = StudentContainer.Instance(); //deklaracija studenta
             do
             {
@@ -107,13 +106,16 @@ namespace Project.App
                 if (student.GetStudents().Count < 1)
                 {
                     Console.WriteLine("There are no enlisted students");
+
                 }
                 else
+
                 {
-                    foreach (Student student in Student.GetStudents())
+                    foreach (Student st in student.GetStudents())
                     {
-                        Console.WriteLine("{0}. {1}, {2} , {3}", nextId, student.LastName, student.FirstName, student.Gpa);
+                        Console.WriteLine("{0}. {1}, {2}, {3}", st.Id, st.LastName, st.FirstName, st.Gpa);
                     }
+                   
                 }
             }
         }

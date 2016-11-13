@@ -737,7 +737,30 @@
     "": [
       "Project.Code >= 1.0.0-*"
     ],
-    "DNX,Version=v4.5.1": [],
+    "DNX,Version=v4.5.1": [
+      "fx/Accessibility >= 4.0.0.0",
+      "fx/CustomMarshalers >= 4.0.0.0",
+      "fx/ISymWrapper >= 4.0.0.0",
+      "fx/Microsoft.Activities.Build >= 4.0.0.0",
+      "fx/Microsoft.Build.Conversion.v4.0 >= 4.0.0.0",
+      "fx/Microsoft.Build >= 4.0.0.0",
+      "fx/Microsoft.Build.Engine >= 4.0.0.0",
+      "fx/Microsoft.Build.Framework >= 4.0.0.0",
+      "fx/Microsoft.Build.Tasks.v4.0 >= 4.0.0.0",
+      "fx/Microsoft.Build.Utilities.v4.0 >= 4.0.0.0",
+      "fx/Microsoft.JScript >= 10.0.0.0",
+      "fx/Microsoft.VisualBasic >= 10.0.0.0",
+      "fx/Microsoft.VisualBasic.Compatibility >= 10.0.0.0",
+      "fx/Microsoft.VisualBasic.Compatibility.Data >= 10.0.0.0",
+      "fx/Microsoft.VisualC >= 10.0.0.0",
+      "fx/Microsoft.VisualC.STLCLR >= 2.0.0.0",
+      "fx/PresentationCore >= 4.0.0.0",
+      "fx/PresentationBuildTasks >= 4.0.0.0",
+      "fx/PresentationFramework >= 4.0.0.0",
+      "fx/PresentationFramework.Aero >= 4.0.0.0",
+      "fx/presentationframework.aero2 >= 4.0.0.0",
+      "fx/presentationframework.aerolite >= 4.0.0.0"
+    ],
     "DNXCore,Version=v5.0": [
       "System.Collections >= 4.0.10-beta-23019",
       "System.Console >= 4.0.0-beta-23019",

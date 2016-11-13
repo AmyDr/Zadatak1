@@ -11,6 +11,7 @@ namespace Project.Code
         private List<Student> studentList = new List<Student>(); //kreiranje liste klase student
         private StudentIdGenerator studentIdGenerator; //definiranje generatora
         private static StudentContainer instance;
+        private StudentIdGenerator IdGenerator;
         public StudentContainer() {
             studentIdGenerator = StudentIdGenerator.getGenerator(); //instanciranje generatora
         }
@@ -28,7 +29,7 @@ namespace Project.Code
         public void AddStudent(string name, string lastName, string gpa)
         {
             studentList.Add(new Student()
-            { FirstName = name, LastName = lastName, Gpa = gpa, Id = StudentIdGenerator.NextId() });
+            { FirstName = name, LastName = lastName, Gpa = gpa, Id = IdGenerator.NextId().ToString() });
         }
         
         public List<Student> GetStudents()
@@ -36,5 +37,6 @@ namespace Project.Code
             studentList = studentList.OrderBy(x => x.LastName).ToList();  //sort by last name - ascending
             return studentList;
         }
+        
     }
 }
