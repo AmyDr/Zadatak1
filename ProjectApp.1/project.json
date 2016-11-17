@@ -1,0 +1,38 @@
+{
+    "version": "1.0.0-*",
+    "description": "ProjectApp.1 Console Application",
+    "authors": [ "Amanda" ],
+    "tags": [ "" ],
+    "projectUrl": "",
+    "licenseUrl": "",
+
+    "dependencies": {
+        "Project.Code": "1.0.0-*"
+    },
+
+    "commands": {
+        "ProjectApp.1": "ProjectApp.1"
+    },
+
+    "frameworks": {
+        "dnx451": {
+            "frameworkAssemblies": {
+                "System.Reflection.Context": "4.0.0.0",
+                "System.Runtime.Caching": "4.0.0.0",
+                "System.Runtime.DurableInstancing": "4.0.0.0",
+                "System.Runtime.Remoting": "4.0.0.0",
+                "System.Runtime.Serialization": "4.0.0.0",
+                "Accessibility": "4.0.0.0"
+            }
+        },
+        "dnxcore50": {
+            "dependencies": {
+                "System.Collections": "4.0.10-beta-23019",
+                "System.Console": "4.0.0-beta-23019",
+                "System.Linq": "4.0.0-beta-23019",
+                "System.Threading": "4.0.10-beta-23019",
+                "Microsoft.CSharp": "4.0.0-beta-23019"
+            }
+        }
+    }
+}

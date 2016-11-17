@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Project.Code;//upotreba klasa
+using Project.Code;
 
 namespace Project.App
 //everything related to the console's input/output
@@ -12,6 +9,8 @@ namespace Project.App
         public void Main(string[] args)
         {
 
+            StudentContainer student = StudentContainer.Instance(); //deklaracija studenta
+
             string firstName;
             string lastName;
             string gpa;
@@ -19,7 +18,7 @@ namespace Project.App
             bool validateOperation;
             bool validateString;
             bool result;
-            StudentContainer student = StudentContainer.Instance(); //deklaracija studenta
+           
             do
             {
 
@@ -115,9 +114,9 @@ namespace Project.App
                     {
                         Console.WriteLine("{0}. {1}, {2}, {3}", st.Id, st.LastName, st.FirstName, st.Gpa);
                     }
-                   
+
                 }
             }
         }
-    }
+     }
 }

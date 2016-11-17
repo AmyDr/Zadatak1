@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Project.Code
@@ -10,10 +11,10 @@ namespace Project.Code
     {
         private List<Student> studentList = new List<Student>(); //kreiranje liste klase student
         private StudentIdGenerator studentIdGenerator; //definiranje generatora
-        private static StudentContainer instance;
-        private StudentIdGenerator IdGenerator;
-        public StudentContainer() {
-            studentIdGenerator = StudentIdGenerator.getGenerator(); //instanciranje generatora
+        private static StudentContainer instance = null;
+        private StudentContainer()
+        {
+          studentIdGenerator = StudentIdGenerator.getGenerator(); //instanciranje generatora
         }
         //singleton pattern za listu
         public static StudentContainer Instance()
@@ -29,14 +30,14 @@ namespace Project.Code
         public void AddStudent(string name, string lastName, string gpa)
         {
             studentList.Add(new Student()
-            { FirstName = name, LastName = lastName, Gpa = gpa, Id = IdGenerator.NextId().ToString() });
+            { FirstName = name, LastName = lastName, Gpa = gpa, Id = studentIdGenerator.NextId() });
         }
-        
+
         public List<Student> GetStudents()
         {
             studentList = studentList.OrderBy(x => x.LastName).ToList();  //sort by last name - ascending
             return studentList;
         }
-        
+
     }
 }
