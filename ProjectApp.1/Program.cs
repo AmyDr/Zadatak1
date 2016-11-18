@@ -6,7 +6,7 @@ namespace Project.App
 {
     public class Program
     {
-        public void Main(string[] args)
+        public static void Main(string[] args)
         {
 
             StudentContainer student = StudentContainer.Instance(); //deklaracija studenta
@@ -117,6 +117,7 @@ namespace Project.App
 
                 }
             }
+            Console.ReadKey();
         }
      }
 }
